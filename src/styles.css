@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --shadow-color: 180deg 0% 80%;
+  --shadow-elevation-low: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+    0px 0.8px 0.9px -1.2px hsl(var(--shadow-color) / 0.34),
+    0px 1.9px 2.1px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    0px 3.8px 4.3px -1.7px hsl(var(--shadow-color) / 0.36),
+    0.1px 9.3px 10.5px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+    0px 2.7px 3px -0.4px hsl(var(--shadow-color) / 0.34),
+    0px 5px 5.6px -0.7px hsl(var(--shadow-color) / 0.34),
+    0.1px 8.3px 9.3px -1.1px hsl(var(--shadow-color) / 0.34),
+    0.1px 13.2px 14.9px -1.4px hsl(var(--shadow-color) / 0.34),
+    0.2px 20.7px 23.3px -1.8px hsl(var(--shadow-color) / 0.34),
+    0.2px 31.4px 35.3px -2.1px hsl(var(--shadow-color) / 0.34),
+    0.4px 46.3px 52.1px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+.app-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-container {
+  box-shadow: var(--shadow-elevation-high);
+  padding: 2em;
+  width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .form-container {
+    width: 100%;
+  }
+}
+.form-control:focus {
+  border-color: #f4f4f4;
+  box-shadow: none;
+  outline: none;
+  border-bottom: 3px solid #2fb2d3;
+}
+.form-control:focus:valid {
+  outline: none;
+  border-bottom: 3px solid #55c57a;
+}
+.form-control:focus:invalid {
+  border-bottom: 3px solid #ff3e30;
+}
+.form-control::-webkit-input-placeholder {
+  color: #bbb;
+}

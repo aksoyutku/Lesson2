@@ -1,0 +1,35 @@
+<h3 class="mb-3">LOGIN</h3>
+
+<form>
+  <div class="mb-3">
+    <label for="userName" class="form-label">{{ userName }}</label>
+    <input
+      minlength="4"
+      maxlength="32"
+      type="text"
+      class="form-control"
+      id="userName"
+      placeholder="{{ userNameMsg }}"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">
+      {{ password }}
+    </label>
+    <input
+      minlength="8"
+      maxlength="32"
+      type="password"
+      class="form-control"
+      id="password"
+      required
+      placeholder="{{ passwordMsg }}"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary" id="submitBtn">
+    Submit
+  </button>
+</form>
